@@ -1,0 +1,122 @@
+//Description: Write a program that creates an argyle pattern
+//Author: Michael Ly
+//Date: October 17th, 2019
+
+import java.util.Scanner;
+
+public class Argyle {
+
+    public static void main(String[] args){
+
+        Scanner s = new Scanner(System.in);
+
+        System.out.print("Input your window height: ");//asking for the input
+        int height = 0;//initializing the vaiable x
+        boolean valid = false;//starting the loop
+
+        while (!valid) {
+
+            if (!s.hasNextInt()) { //checking to see if the user inputted a non integer
+
+                System.out.print("Error: please type in an integer: ");//printing out an error statement
+                String junkword = s.next(); // discard
+            }
+            else {
+                height = s.nextInt();//getting the input
+
+                if (height > 0){ //checking to see if it is positive or not
+                    valid = true;
+                }
+
+                else{
+                    System.out.print("Enter only integers greater than 0!: ");//error message
+                }
+            }
+        }
+
+        System.out.print("Input your window width: ");//asking for the input
+        int width = 0;//initializing the vaiable x
+        valid = false;//starting the loop
+
+        while (!valid) {
+
+            if (!s.hasNextInt()) { //checking to see if the user inputted a non integer
+                System.out.print("Error: please type in an integer: ");//printing out an error statement
+                String junkword = s.next(); // discard
+            }
+            else {
+                width = s.nextInt();//getting the input
+
+                if (width > 0){ //checking to see if it is positive or not
+                    valid = true;
+                }
+
+                else{
+                    System.out.print("Enter only integers greater than 0!: ");//error message
+                }
+            }
+        }
+
+        System.out.print("Input width of argyle diamonds: ");//asking for the input
+        int size = 0;//initializing the vaiable
+        valid = false;//starting the loop
+
+        while (!valid) {
+
+            if (!s.hasNextInt()) { //checking to see if the user inputted a non integer
+                System.out.print("Error: please type in an integer: ");//printing out an error statement
+                String junkword = s.next(); // discard
+            }
+            else {
+                size = s.nextInt();//getting the input
+
+                if (size > 0){ //checking to see if it is positive or not
+                    valid = true;
+                }
+
+                else{
+                    System.out.print("Enter only integers greater than 0!: ");//error message
+                }
+            }
+        }
+
+        System.out.print("Input width of argyle center stripe: ");//asking for the input
+        int strip = 0;//initializing the vaiable
+        valid = false;//starting the loop
+
+        while (!valid) {
+
+            if (!s.hasNextInt()) { //checking to see if the user inputted a non integer
+                System.out.print("Error: please type in an integer: ");//printing out an error statement
+                String junkword = s.next(); // discard
+            }
+            else {
+                strip = s.nextInt();//getting the input
+
+                if (strip > 0 && strip < (size/2) && (strip % 2) != 0){ //checking to see if it is positive or not
+                    valid = true;
+                }
+
+                else{
+                    System.out.print("Enter only odd integers less than half the diamond width!: ");//error message
+                }
+            }
+        }
+
+        System.out.print("Enter the first character for the pattern fill: ");//asking for the input
+        String temp = s.nextLine();
+        char a = temp.charAt(0);
+
+        System.out.print("Enter the second character for the pattern fill: ");//asking for the input
+        temp = s.nextLine();
+        char b = temp.charAt(0);
+
+        System.out.print("Enter the third character for the stripe fill: ");//asking for the input
+        temp = s.nextLine();
+        char c = temp.charAt(0);
+
+        for (int i = 1; i < height; i++){
+            
+        }
+    }
+}
